@@ -4,8 +4,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Create a react function or class (component)
+const funk = function () {
+  return "Hi There function";
+}
+
+function getDate() {
+  return (new Date()).toLocaleDateString();
+
+}
+
 const App = () => {
-  return <div>First React function. </div>;
+  return (
+    <div>
+      <div>Current date: {getDate()}</div>
+
+      <label className="label" htmlFor="inputNombre"> Name: </label>
+      <input id="inputNombre" type="text" ></input>
+      <button style={{ backgroundColor: "black", color: "white" }}> Submit </button>
+
+
+
+    </div >
+
+
+  );
 }
 
 // Render the component to the browser 
